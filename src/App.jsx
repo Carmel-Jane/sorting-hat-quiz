@@ -7,6 +7,17 @@ function App() {
   const [scores, setScores] = useState({ Gryffindor: 0, Hufflepuff: 0, Ravenclaw: 0, Slytherin: 0 });
   const [showResult, setShowResult] = useState(false);
 
+
+  const handleAnswerOptionClick = (house) => {
+    setScores(prevScores => ({ ...prevScores, [house]: prevScores[house] + 1 }));
+    const nextQuestion = currentQuestion + 1;
+    if (nextQuestion < questions.length) {
+      setCurrentQuestion(nextQuestion);
+    } else {
+      setShowResult(true);
+    }
+  };
+  
   return (
     <div className="App">
       <Quiz question={questions[currentQuestion]} handleAnswerOptionClick={() => {}} />
