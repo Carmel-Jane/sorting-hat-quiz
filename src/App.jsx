@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import questions from './questions';
 import Quiz from './components/Quiz';
+import Result from './components/Result';
 
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
