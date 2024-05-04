@@ -17,10 +17,15 @@ function App() {
       setShowResult(true);
     }
   };
-  
+
+ 
   return (
     <div className="App">
-      <Quiz question={questions[currentQuestion]} handleAnswerOptionClick={() => {}} />
+      {showResult ? (
+        <Result scores={scores} />
+      ) : (
+        <Quiz question={questions[currentQuestion]} handleAnswerOptionClick={handleAnswerOptionClick} />
+      )}
     </div>
   );
 }
