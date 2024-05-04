@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-const Quiz = () => {
+function Quiz({ question, handleAnswerOptionClick }) {
   return (
-    <div>Quiz</div>
-  )
+    <div>
+      <div>{question.questionText}</div>
+      {question.answerOptions.map((option, index) => (
+        <button onClick={() => handleAnswerOptionClick(option.house)} key={index}>
+          {option.answerText}
+        </button>
+      ))}
+    </div>
+  );
 }
 
-export default Quiz
+export default Quiz;

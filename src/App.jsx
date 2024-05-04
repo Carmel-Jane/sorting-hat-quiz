@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import questions from './questions';
+import Quiz from './components/Quiz';
 
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      Hello, world!
+      <Quiz question={questions[currentQuestion]} handleAnswerOptionClick={() => {}} />
     </div>
   );
 }
