@@ -26,3 +26,5 @@ const questions = [
       { answerText: 'Working on personal projects', house: 'Slytherin' },
     ],
   },]
+
+  export default questions;
