@@ -8,7 +8,6 @@ function App() {
   const [scores, setScores] = useState({ Gryffindor: 0, Hufflepuff: 0, Ravenclaw: 0, Slytherin: 0 });
   const [showResult, setShowResult] = useState(false);
 
-
   const handleAnswerOptionClick = (house) => {
     setScores(prevScores => ({ ...prevScores, [house]: prevScores[house] + 1 }));
     const nextQuestion = currentQuestion + 1;
@@ -19,14 +18,15 @@ function App() {
     }
   };
 
- 
   return (
-    <div className="App">
-      {showResult ? (
-        <Result scores={scores} />
-      ) : (
-        <Quiz question={questions[currentQuestion]} handleAnswerOptionClick={handleAnswerOptionClick} />
-      )}
+    <div className="bg-gradient-to-br from-gray-100 to-gray-300 min-h-screen flex justify-center items-center">
+      <div className="max-w-md w-full">
+        {showResult ? (
+          <Result scores={scores} />
+        ) : (
+          <Quiz question={questions[currentQuestion]} handleAnswerOptionClick={handleAnswerOptionClick} />
+        )}
+      </div>
     </div>
   );
 }
