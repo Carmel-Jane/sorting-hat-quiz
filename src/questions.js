@@ -1,5 +1,5 @@
 const questions = [
-{
+  {
     questionText: 'What is your preferred social media platform?',
     answerOptions: [
       { answerText: 'Instagram', house: 'Gryffindor' },
@@ -25,6 +25,42 @@ const questions = [
       { answerText: 'Spending time with friends and family', house: 'Hufflepuff' },
       { answerText: 'Working on personal projects', house: 'Slytherin' },
     ],
-  },]
+  },
+  {
+    questionText: 'What is your favorite subject in school?',
+    answerOptions: [
+      { answerText: 'Physical Education', house: 'Gryffindor' },
+      { answerText: 'Mathematics', house: 'Ravenclaw' },
+      { answerText: 'Art', house: 'Hufflepuff' },
+      { answerText: 'Business Studies', house: 'Slytherin' },
+    ],
+  },
+  {
+    questionText: 'Summer or Winter?',
+    answerOptions: [
+      { answerText: 'Winter', house: 'Ravenclaw, Slytherin' },
+      { answerText: 'Summer', house: 'Gryffindor, Hufflepuff' },
+    ],
+  },
+  {
+    questionText: 'Which quality do you admire most in others?',
+    answerOptions: [
+      { answerText: 'Bravery', house: 'Gryffindor' },
+      { answerText: 'Intellectual curiosity', house: 'Ravenclaw' },
+      { answerText: 'Kindness', house: 'Hufflepuff' },
+      { answerText: 'Ambition', house: 'Slytherin' },
+    ],
+  },
+  {
+    questionText: 'What is your favorite type of food?',
+    answerOptions: [
+      { answerText: 'Spicy', house: 'Gryffindor' },
+      { answerText: 'Exotic', house: 'Ravenclaw' },
+      { answerText: 'Comfort food', house: 'Hufflepuff' },
+      { answerText: 'Gourmet', house: 'Slytherin' },
+    ],
+  },
+];
 
-  export default questions;
+export default questions;
+
